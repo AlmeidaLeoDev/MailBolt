@@ -126,7 +126,7 @@ git clone https://github.com/AlmeidaLeoDev/MailBolt
 ```
 Then navigate to the project directory:
 ```bash
-cd EventosPro
+cd MailBolt
 ```
 <p></p>
 
