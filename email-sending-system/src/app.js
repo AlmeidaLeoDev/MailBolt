@@ -1,7 +1,9 @@
 const express = require('express');
+const path = require('path');
 const bodyParser = require("body-parser");
 const nodemailer = require('nodemailer');
 const PORT = 3000;
+require('dotenv').config({ path: path.join(__dirname, '../.env') });
 
 const app = express();
 
@@ -18,6 +20,12 @@ app.get('/', (req, res) => {
 app.post('/send-email', (req, res) => {
     const {recipient, subject, message} = req.body; // Destructuring
 
+    // Check if credentials exist
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+        console.error("Environment variables EMAIL_USER and/or EMAIL_PASS are not set");
+        return res.status(500).send('Email configuration error. Please check server logs.');
+    }
+
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -28,7 +36,7 @@ app.post('/send-email', (req, res) => {
 
     // Define the email options
     const mailOptions = {
-        from: 'sender mail', 
+        from: process.env.EMAIL_USER, 
         to: recipient, 
         subject: subject, 
         text: message,
