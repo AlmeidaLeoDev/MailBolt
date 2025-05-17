@@ -85,7 +85,6 @@ Main Objectives:
 [![Static Badge](https://img.shields.io/badge/html-white?style=for-the-badge&logo=html5)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![Static Badge](https://img.shields.io/badge/css-white?style=for-the-badge&logo=css3&logoColor=%231572B6)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-</br>
 
 ### Dependencies
 
@@ -167,6 +166,7 @@ Demonstration of how the project can be used
 ```bash
 node app.js
 ```
+<p></p>
 
 **2. Open the web interface**
 
@@ -177,6 +177,7 @@ node app.js
   * Message body.
 
 <img src="email-sending-system/src/assets/img/step1.png" alt="step1" width="800" height="auto">
+<p></p>
 
 **3. Send the email**
 
@@ -184,13 +185,14 @@ node app.js
 * The server will process your request and attempt to deliver the email via Gmail’s SMTP.
 
 <img src="email-sending-system/src/assets/img/step2.png" alt="sendEmail" width="800" height="auto">
+<p></p>
 
 **4. Expected outcome**
 
 * On success
   * You’ll see a confirmation message: "Email sent successfully!".
   * The recipient will receive your email in their inbox (check spam folder if missing).
-  <img src="email-sending-system/src/assets/img/emailSended.png" alt="email" width="800" height="auto">
+<img src="email-sending-system/src/assets/img/emailSended.png" alt="email" width="800" height="auto">
 
 * On error
   * An error message will appear (e.g., "Error in sending email. Pleasey try again later.").
