@@ -195,7 +195,7 @@ node app.js
 <img src="email-sending-system/src/assets/img/emailSended.png" alt="email" width="800" height="auto">
 
 * On error
-  * An error message will appear (e.g., "Error in sending email. Pleasey try again later.").
+  * An error message will appear (e.g., "Error in sending email. Please try again later.").
 
 <br />
 <p align="left">(<a href="#readme-top">Back to top</a>)</p>
